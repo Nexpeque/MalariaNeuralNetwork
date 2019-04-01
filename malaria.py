@@ -49,8 +49,8 @@ n_hidden_3 = 8
 n_hidden_4 = 8
 
 x = tf.placeholder(tf.float32, [None, n_dim])
-W = tf.Variable(tf.zeros([n_dim, n_class]))
-b = tf.Variable(tf.zeros([n_class]))
+W = tf.Variable(0.1*tf.zeros([n_dim, n_class]))
+b = tf.Variable(0.1*tf.zeros([n_class]))
 y_ = tf.placeholder(tf.float32, [None, n_class])
 
 def multilayer_perceptron(x, weights, biases):
